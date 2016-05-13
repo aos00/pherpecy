@@ -1,0 +1,32 @@
+Performing system checks...
+
+System check identified no issues (0 silenced).
+
+You have 13 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
+Run 'python manage.py migrate' to apply them.
+
+May 13, 2016 - 22:32:33
+Django version 1.10.dev20160419002554, using settings 'perphecyv1.settings'
+Starting development server at http://127.0.0.1:8000/
+Quit the server with CONTROL-C.
+[13/May/2016 22:32:39] "GET /command/ HTTP/1.1" 200 35
+Internal Server Error: /command/command_output/
+Traceback (most recent call last):
+  File "/home/username/opt/django/django/utils/datastructures.py", line 83, in __getitem__
+    list_ = super(MultiValueDict, self).__getitem__(key)
+KeyError: 'command_output'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/username/opt/django/django/core/handlers/base.py", line 149, in get_response
+    response = self.process_exception_by_middleware(e, request)
+  File "/home/username/opt/django/django/core/handlers/base.py", line 147, in get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/username/pycharm_workspace/perphecyv1/server/command/views.py", line 20, in upload_file
+    handle_uploaded_file(request.FILES['command_output'])
+  File "/home/username/opt/django/django/utils/datastructures.py", line 85, in __getitem__
+    raise MultiValueDictKeyError(repr(key))
+django.utils.datastructures.MultiValueDictKeyError: "'command_output'"
+[13/May/2016 22:32:39] "POST /command/command_output/ HTTP/1.1" 500 72908
+
