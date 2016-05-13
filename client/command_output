@@ -1,0 +1,5 @@
+total 12
+drwxrwxr-x 2 username username 4096 Mai  8 01:04 .
+drwxr-xr-x 8 username username 4096 Mai  7 22:55 ..
+-rw-rw-r-- 1 username username  868 Mai  8 01:04 client.py
+-rw-rw-r-- 1 username username    0 Mai  8 01:15 command_output
